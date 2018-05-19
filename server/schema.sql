@@ -4,21 +4,21 @@ USE chat;
 
 CREATE TABLE users (
   id integer primary key auto_increment,
-  userName VARCHAR(50) not null
+  username VARCHAR(50) not null
 );
 
 CREATE TABLE rooms (
   id integer primary key auto_increment,
-  roomName VARCHAR(50) not null
+  roomname VARCHAR(50) not null
 );
 
 CREATE TABLE messages (
   id integer primary key auto_increment,
-  userId integer,
-  roomId integer,
-  messageText VARCHAR(300) not null,
-  FOREIGN KEY(userId) REFERENCES users(id),
-  FOREIGN KEY(roomId) REFERENCES rooms(id)
+  userid integer,
+  roomid integer,
+  messagetext VARCHAR(300) not null,
+  FOREIGN KEY(userid) REFERENCES users(id),
+  FOREIGN KEY(roomid) REFERENCES rooms(id)
 );
 
 /* Create other tables and define schemas for them here! */
